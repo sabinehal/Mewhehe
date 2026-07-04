@@ -7,12 +7,10 @@
 <title>happy birthday, my smol baby </title>
 
 <script>
-  /* ============ CONFIG — edit these to personalize ============ */
   window.CONFIG = {
     name: "Jory",
     nickname: "My Smol Baby",
     date: "July 5",
-    // Reasons — edit freely, add or remove as many as you want.
     reasons: [
       "The way you say goodnight even when it's already morning for me.",
       "You remember the small things I mention once not all but still i'm happy.",
@@ -20,7 +18,6 @@
       "Your smile & laugh over anything still sounds like home.",
       "I like when you try to be boss baby but akways end up asking help haha."
     ],
-    // The final message.
     message: "Happy Birthday, My Smol Baby!\n\nYou're the type of person who can make me feel good no matter what I'm feeling. You always make me happy, always comfort me, and I like when u try to annoy me but always fail haha.\n\nSince we met, we always end up in problems either caused by us or by others. And yk, I was actually surprised when I found out you really loved me. I was like, is it even real or just a dream haha. And in December you nearly gave me a heart attack cause u were about to leave... but all fixed now.\n\nFor the upcoming year, I want you to leave your laziness and too much games and become a responsible person, and also a good wife.\n\nHappy birthday again. You deserve the world and I will do everything to make you happy. And sorry cause I annoy you dw, it will happen again \uD83D\uDE44\n\nWell..... about the gift I saved 100 usd, of which I'll only be able to send you 40%. But I promise, next time I'll do everything to send you something real, since I'll have my own credit card by then.\n\nAnd happy birthday again, my smol baby and I want sooo much picssssss \uD83D\uDC3E",
     signOff: "always yours Nehal"
   };
@@ -57,7 +54,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ---------- scroll progress ---------- */
   #progress{
     position: fixed; top: 0; left: 0; height: 2px; width: 0%;
     background: linear-gradient(90deg, transparent, var(--gold-soft), var(--gold));
@@ -66,7 +62,6 @@
     transition: width 0.1s linear;
   }
 
-  /* ---------- ambient layers ---------- */
   #aurora{
     position: fixed; inset: -20% 0 auto 0; height: 70vh; z-index: 0; pointer-events: none;
     background:
@@ -80,7 +75,6 @@
     100%{ transform: translateX(4%) scale(1.08); opacity: 1; }
   }
 
-  /* crescent moon in the hero sky */
   #moon{
     position: fixed; top: 8vh; right: 10vw; z-index: 0; pointer-events: none;
     width: 54px; height: 54px; border-radius: 50%;
@@ -120,7 +114,6 @@
     100%{ transform: translateY(-110vh) translateX(30px); opacity: 0; }
   }
 
-  /* drifting paw prints */
   #paws span{
     position: absolute; bottom: -30px;
     font-size: 16px; color: var(--dusk-blue);
@@ -216,7 +209,6 @@
   }
   @keyframes growLine{ to{ width: 40px; } }
 
-  /* ---------- candle + cat ---------- */
   #candle-scene{
     position: relative;
     width: 220px; height: 240px;
@@ -238,7 +230,6 @@
     50%{ transform: translateY(-6px); }
   }
 
-  /* sitting cat watching the flame */
   #hero-cat{
     position: absolute; right: -8px; bottom: 0;
     width: 78px; height: 92px;
@@ -396,7 +387,6 @@
     text-transform: uppercase; color: var(--dusk-blue); margin-top: 4px; opacity: 0.7;
   }
 
-  /* ---------- section headers ---------- */
   .reveal{ opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease, transform 0.9s ease; }
   .reveal.in{ opacity: 1; transform: translateY(0); }
 
@@ -413,7 +403,6 @@
     font-size: 16px; margin-top: -46px; margin-bottom: 60px;
   }
 
-  /* ---------- reasons ---------- */
   .reasons{ max-width: 640px; width: 100%; display: flex; flex-direction: column; gap: 0; }
   .reason{
     display: flex; gap: 20px; align-items: flex-start; text-align: left;
@@ -439,7 +428,6 @@
   .reason:hover .mark{ transform: scale(1.25) rotate(-6deg); color: var(--gold-soft); }
   .reason p{ font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--ink); margin: 0; }
 
-  /* ---------- final message ---------- */
   .final-label{
     font-family: var(--mono); font-size: 12px; letter-spacing: 0.28em;
     text-transform: uppercase; color: var(--dusk-blue); margin-bottom: 30px;
@@ -456,7 +444,6 @@
   }
   .signoff.in{ opacity: 1; transform: translateY(0); }
 
-  /* ---------- envelope + letter ---------- */
   #final-section{ min-height: auto; justify-content: center; padding: 120px 24px 60px; }
   #envelope-wrap{ perspective: 1400px; margin-top: 40px; position: relative; }
   .envelope{
@@ -509,7 +496,6 @@
     transition: opacity 0.3s ease 0s, transform 0.3s ease 0s;
   }
 
-  /* letter opens as a centered sheet that fits the screen, folds like origami */
   .letter-modal{
     position: fixed; inset: 0; z-index: 60;
     display: flex; align-items: center; justify-content: center;
@@ -589,7 +575,6 @@
 <div id="flash"></div>
 <div id="burst"></div>
 
-<!-- HERO -->
 <section id="hero">
   <div class="eyebrow">Happy Birthday</div>
   <h1 class="title" id="title-text"></h1>
@@ -605,7 +590,6 @@
       <div class="wick"></div>
       <div class="candle-body" id="candle-body"></div>
     </div>
-    <!-- little cat watching the flame -->
     <svg id="hero-cat" viewBox="0 0 100 100" fill="#7f92aa" aria-hidden="true">
       <g class="tail">
         <path d="M70 84 q26 4 20 -26 q-3 -15 -13 -11 q8 4 7 15 q-1 13 -14 10 z"/>
@@ -652,14 +636,12 @@
   </div>
 </section>
 
-<!-- REASONS -->
 <section id="reasons-section">
   <div class="section-label reveal">Our Little History</div>
   <h2 class="section-title reveal">a few reasons why</h2>
   <div class="reasons" id="reasons-list"></div>
 </section>
 
-<!-- FINAL -->
 <section id="final-section">
   <div class="final-label reveal">Made With Love, Just For You</div>
   <div id="envelope-wrap">
@@ -673,7 +655,6 @@
   <div class="envelope-hint" id="envelope-hint">tap to open the letter</div>
 </section>
 
-<!-- LETTER (opens centered, fits the screen) -->
 <div class="letter-modal" id="letter-modal" aria-hidden="true">
   <div class="letter-card" id="letter-card">
     <div class="message" id="final-message"></div>
@@ -687,8 +668,7 @@
 (function(){
   const C = window.CONFIG;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // ---- scroll progress ----
+  
   const progress = document.getElementById('progress');
   function onScroll(){
     const h = document.documentElement;
@@ -698,7 +678,6 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // ---- starfield ----
   const starsEl = document.getElementById('stars');
   for(let i=0;i<90;i++){
     const s = document.createElement('span');
@@ -712,8 +691,7 @@
     if(big) s.classList.add('big');
     starsEl.appendChild(s);
   }
-
-  // ---- floating light dust ----
+  
   if(!reduce){
     const dustEl = document.getElementById('dust');
     for(let i=0;i<24;i++){
@@ -725,7 +703,6 @@
       d.style.transform = 'scale(' + (0.6 + Math.random()*1.4) + ')';
       dustEl.appendChild(d);
     }
-    // drifting paw prints
     const pawsEl = document.getElementById('paws');
     for(let i=0;i<9;i++){
       const p = document.createElement('span');
@@ -739,7 +716,6 @@
     }
   }
 
-  // ---- shooting stars ----
   if(!reduce){
     const shootEl = document.getElementById('shooting');
     function shoot(){
@@ -762,7 +738,6 @@
     setTimeout(shoot, 2500);
   }
 
-  // ---- title (letter-by-letter blur-in) ----
   const titleEl = document.getElementById('title-text');
   function appendChars(text, cls, startDelay, step){
     let delay = startDelay;
@@ -788,7 +763,6 @@
 
   document.getElementById('date-text').textContent = C.date.toUpperCase();
 
-  // ---- ambient embers from the flame ----
   const wrap = document.getElementById('candle-wrap');
   let emberTimer = null;
   function spawnEmber(){
@@ -805,7 +779,6 @@
   }
   if(!reduce){ emberTimer = setInterval(spawnEmber, 650); }
 
-  // ---- candle interaction ----
   const flame = document.getElementById('flame');
   const flameOuter = document.getElementById('flame-outer');
   const flameCore = document.getElementById('flame-core');
@@ -910,8 +883,7 @@
       });
     }, 1100);
   });
-
-  // ---- reasons ----
+  
   const reasonsList = document.getElementById('reasons-list');
   C.reasons.forEach(function(rn, i){
     const div = document.createElement('div');
@@ -921,11 +893,9 @@
     reasonsList.appendChild(div);
   });
 
-  // ---- final message ----
   document.getElementById('final-message').textContent = C.message;
   document.getElementById('final-signoff').textContent = C.signOff;
-
-  // ---- envelope / letter (+ floating cats & paws) ----
+  
   const envelope = document.getElementById('envelope');
   const envelopeHint = document.getElementById('envelope-hint');
   const envWrap = document.getElementById('envelope-wrap');
@@ -971,15 +941,13 @@
     envelopeHint.classList.remove('hidden');
     envelopeHint.textContent = 'tap to open the letter';
   }
-  // tap the dim area (outside the sheet) to close
   modal.addEventListener('click', function(e){
     if(e.target === modal) closeLetter();
   });
   document.addEventListener('keydown', function(e){
     if(e.key === 'Escape' && modal.classList.contains('show')) closeLetter();
   });
-
-  // ---- scroll reveal ----
+  
   const revealTargets = document.querySelectorAll('.reveal, .reason');
   if(reduce){
     revealTargets.forEach(function(el){ el.classList.add('in'); });
